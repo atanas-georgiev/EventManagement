@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EventManagement.Registration.Shared" Version="1.0.202" />
+    <PackageReference Include="EventManagement.Shared.ServiceBus" Version="1.0.0-CI-20180320-090402" />
+    <PackageReference Include="NServiceBus.Persistence.Sql.MsBuild" Version="4.0.0-rc0003" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventManagement.Payment.Data.Models\EventManagement.Payment.Data.Models.csproj" />
+    <ProjectReference Include="..\EventManagement.Payment.Data\EventManagement.Payment.Data.csproj" />
+    <ProjectReference Include="..\EventManagement.Payment.Shared\EventManagement.Payment.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

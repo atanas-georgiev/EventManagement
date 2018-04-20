@@ -1,0 +1,69 @@
+.popups {
+    z-index: 1000;
+    min-width: 380px;
+    .popup-label{
+        .fa.fa-times{
+            margin-left: 5px;
+        }
+        .navbar-toggle {
+            margin: 0;
+            height: 40px;
+            margin-top: -40px;
+            display: block !important;
+        }
+    }  
+
+    .popup-body {
+        background: white;
+        padding: 20px;
+    }
+}
+
+.comment-popup {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    .comments-past{
+        overflow-y: auto;
+        height: 50%;
+        border: 1px solid $light-gray;
+        .comments-container{
+            height: 100%;
+            .popup-comment{
+                padding: 10px;
+                border-bottom: 1px solid $light-gray;
+                .comment-status{
+                    color: $green-blue;
+                }
+            }
+        }
+    }
+    .new-comment-container{
+        height: 50%;
+    }
+}
+.files-popup {
+    position: fixed;
+    bottom: 25px;
+    right: 160px;
+    .scrollable{
+        overflow-y: auto;
+        border: 1px solid $light-gray;
+        .inner-well{
+            height: 100%;
+        }
+    }
+    .well{      
+        font-size: 12px;
+    }
+    th{
+        font-weight: normal;
+    }
+    td{
+        padding: 2px !important;
+        border: none !important;
+        .fa{
+            margin-right: 3px;
+        }
+    }
+}

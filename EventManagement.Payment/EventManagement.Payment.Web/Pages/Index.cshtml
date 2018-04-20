@@ -1,0 +1,96 @@
+﻿@page
+@using EventManagement.Payment.Web.ViewModels
+@using Microsoft.Extensions.Configuration
+@inject IConfigurationRoot Configuration
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<br />
+<div class="row">
+    <div class="col-md-5 col-center">
+        <table id="grid"></table>
+    </div>
+</div>
+
+<div id="dialog" style="display: none">
+    <div data-role="body">
+        Are you sure?
+    </div>
+    <div data-role="footer">
+        <button class="btn" id="delete-dialog-ok">OK</button>
+        <button class="btn" data-role="close">Cancel</button>
+    </div>
+</div>
+
+@section Scripts
+    {
+<script type="text/javascript">
+
+        var PaymentsGrid = (function () {
+
+            var grid;
+
+            function init() {
+                var data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Payments) as String);
+                
+                grid = $('#grid').grid({
+                    dataSource: data,
+                    columns: [
+                        { field: 'PaymentId', title: 'Id', sortable: true },
+                        { field: 'UserName', title: 'Name', sortable: true },
+                        { field: 'EventName', title: 'Event', sortable: true },
+                        { field: 'Price', title: 'Price', sortable: true },
+                        @if (@*User.IsInRole("Admin")*@ true)
+                        {
+                            @:{ tmpl: '<span class="glyphicon glyphicon-ok gj-cursor-pointer" title="Accept"> </span>', width: 80, align: 'center', events: { 'click': GridEvents.Accept } },
+                            @:{ tmpl: '<span class="glyphicon glyphicon-remove gj-cursor-pointer" title="Reject"> </span>', width: 80, align: 'center', events: { 'click': GridEvents.Reject } },
+                        }
+                    ],
+                    pager: { limit: 10 }
+                });
+            }
+
+            var GridEvents = {
+                Accept: function (e) {
+                    $.ajax({
+                        type: "post",
+                        url: '@(Configuration["ServiceLocations:Payment"])api/Payment/Complete',
+                        data: JSON.stringify({ paymentId: e.data.record.PaymentId }),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (result, textStatus) {
+                            grid.removeRow(grid.getSelected() - 1);
+                        },
+                        error: function (err, scnd) {
+                            console.log("error");
+                        }
+                    });
+                },
+
+                Reject: function (e) {
+                    $.ajax({
+                        type: "post",
+                        url: '@(Configuration["ServiceLocations:Payment"])api/Payment/Cancel',
+                        data: JSON.stringify({ paymentId: e.data.record.PaymentId }),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (result, textStatus) {
+                            grid.removeRow(grid.getSelected() - 1);
+                        },
+                        error: function (err, scnd) {
+                            console.log("error");
+                        }
+                    });
+                }
+            }
+
+            return {
+                init: init
+            }
+        })();
+
+            $(document).ready(function () {
+                PaymentsGrid.init();
+            });
+</script>
+}

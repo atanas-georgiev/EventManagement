@@ -1,0 +1,9 @@
+﻿namespace EventManagement.Portal.Web.ViewModels
+{
+    public class LinksVM
+    {
+        public string Link { get; set; }
+        
+        public string Title { get; set; }
+    }
+}

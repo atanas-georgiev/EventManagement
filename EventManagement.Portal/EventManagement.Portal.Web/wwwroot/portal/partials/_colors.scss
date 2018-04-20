@@ -1,0 +1,33 @@
+// Color Palette
+///primary
+$light-blue: #1CA4D3; //light blue
+$mid-blue: #1B77AF; //mid blue 
+$dark-blue: #00338D; //dark blue
+//secondary
+$light-purple: #7C2E87; //light purple
+$purple: #470A68; //purple
+$violet: #4A4499; //violet
+$green-blue: #00A3A1; //green
+//tertiary
+$dark-green: #009A44; //dark green
+$light-green: #43B02A; //light green
+$yellow: #EAAA00; //yellow
+$orange: #F68D2E; //orange
+$red: #BC204B; //red
+$pink: #C6007E; //pink
+//grays
+$darkest-gray: #333333;
+$dark-gray: #666666;
+$mid-gray: #999999;
+$light-gray: #f0f0f0;
+$lightest-gray: #fafafa;
+//other
+$lightest-blue: #99BFE3;
+
+//basic
+$white: #ffffff;
+$black: #000000;
+//color classes
+.blue-lightest{
+  color: lighten($lightest-blue, 10%);
+}

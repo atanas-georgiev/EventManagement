@@ -1,0 +1,27 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfigurationRoot Configuration
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EventManagement.Resources.Web</title>
+    <base href="@(Configuration["ServiceLocations:Resources"])" />
+    <script type="text/javascript">
+        window.baseUrl = "@(Configuration["ServiceLocations:Resources"])";
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    @*<link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="@(Configuration["ServiceLocations:Portal"] + "dist/portal.min.css")" />
+    <link rel="stylesheet" href="https://unpkg.com/gijgo@1.9.3/combined/css/gijgo.min.css" />
+</head>
+<body>
+
+    @RenderBody()
+    
+    @RenderSection("scripts", false)
+
+</body>
+</html>

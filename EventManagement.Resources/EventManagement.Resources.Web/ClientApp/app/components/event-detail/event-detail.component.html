@@ -1,0 +1,39 @@
+<div *ngIf="event" class="col-md-9 well">
+    <div class="row">
+        <h2 class="col-md-12">{{ event.name }}</h2>
+        <div class="event-date col-md-3">
+            <table>
+                <tr>
+                    <td><span class="glyphicon glyphicon-time"></span></td>
+                    <td><b>Start:</b> {{ event.start | date:'dd MMM HH:mm'}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b>End:</b> {{ event.end | date:'dd MMM HH:mm'}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="event-date col-md-3">
+            <div class="row">
+                <span class="glyphicon glyphicon-user"></span> <span>Lecturer:</span> {{ event.lecturerName }}
+            </div>
+            <div class="row">
+                <span class="glyphicon glyphicon-euro"></span> <span>Price:</span> {{ event.price }}
+            </div>
+        </div>
+        <div class="event-date col-md-6" *ngIf="resource">
+            <span class="glyphicon glyphicon-map-marker"></span> {{ resource.location }} at {{ resource.name }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+            <p>{{ event.additionalInfo }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a routerLink="/events-list" routerLinkActive="active" class="btn btn-default">Back</a>
+        </div>
+    </div>
+</div>

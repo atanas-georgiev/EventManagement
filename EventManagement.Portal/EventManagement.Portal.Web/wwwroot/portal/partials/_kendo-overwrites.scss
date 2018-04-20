@@ -1,0 +1,4 @@
+﻿.k-filtercell .k-filtercell-operator > .k-button:not(.k-clear-button-visible), .k-filtercell > span > .k-button:not(.k-clear-button-visible) {
+    visibility: hidden;
+    pointer-events: none;
+}

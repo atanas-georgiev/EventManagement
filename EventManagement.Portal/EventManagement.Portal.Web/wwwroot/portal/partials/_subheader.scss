@@ -1,0 +1,88 @@
+//Subheader
+.subheader {
+    background: $white;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;    
+	align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+    .subheader-item {
+        float: left;
+    }
+
+    .btn {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .title {
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        h2 {
+            font-weight: normal;
+            font-size: 20px;
+            margin: 0;
+            color: $mid-blue;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .nav-prev, .nav-next {
+        p {
+            color: $dark-gray;
+        }
+
+        padding: 5px 10px;
+
+        .fa {
+            font-size: 2em;
+            display: inline-block;
+        }
+
+        .info {
+            line-height: 1em;
+        }
+    }
+
+    .nav-prev {
+        .fa,
+        .fnt-small {
+            color: $green-blue;
+        }
+    }
+
+    .nav-next {
+        .fa,
+        .fnt-small {
+            color: $light-purple
+        }
+    }
+
+    .back {
+        padding: 10px;
+
+        a {
+            margin: 10px;
+            border-right: 1px solid $light-gray;
+        }
+
+        a:last-child {
+            border: none;
+        }
+    }
+
+    .subheader-buttons {
+        margin: 5px 0;
+    }
+}

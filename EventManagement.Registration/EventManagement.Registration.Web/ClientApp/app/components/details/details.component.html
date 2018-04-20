@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-5 col-center">
+        <dl>
+            <dt>Event Name</dt>
+            <dd>{{event.eventName}}</dd>
+            <dt>Date</dt>
+            <dd>{{event.start | date:'medium' }} - {{event.end | date:'medium'}}</dd>
+            <dt>Event Location</dt>
+            <dd>{{event.location}}</dd>
+            <dt>Lecturer Name</dt>
+            <dd>{{event.lecturerName}}</dd>
+            <dt>Price</dt>
+            <dd>{{event.price | currency}}</dd>
+            <dt>Free Places</dt>
+            <dd>{{event.resourcePlacesCount}}</dd>
+        </dl>
+
+        <div>
+            <button type="button" class="btn btn-secondary" (click)="back()">Go back</button>
+            <button type="button" class="btn btn-primary" [disabled]="!this.user || event.resourcePlacesCount <= 0" (click)="register()">Register</button>
+        </div>
+    </div>
+</div>

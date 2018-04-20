@@ -1,0 +1,5 @@
+Suffix=2018.04.19 10:18:14
+ReportPath=C:\Users\sstoykova\Source\Repos\EventManagement.Tests.Daily\EventManagement.Tests.Daily\EventManagement.Tests.Daily.EndToEnd\bin\Debug/../../../TestResults/EventManagementUserManagement/chrome_TestReport-2018.04.19 10h 18min 14sec
+ExtentXLocation=C:\Users\sstoykova\Documents\extentx-community-1.0.1\.tmp\uploads
+projectName=EventManagementUserManagement
+tfsReportStatus=

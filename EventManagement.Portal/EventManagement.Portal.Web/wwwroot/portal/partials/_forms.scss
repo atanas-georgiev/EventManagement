@@ -1,0 +1,23 @@
+﻿// overwrite kendo ui
+.k-datepicker .k-picker-wrap {
+    border-color: #b3b3b3;
+    border-radius: 0px;
+}
+
+.k-dateinput-wrap {
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.k-input {
+    padding: 5px 10px;
+}
+
+.k-datepicker {
+    width: 100%;
+    height: 34px !important;
+}
+
+.k-dateinput-wrap {
+    font-size: 14px !important;
+}

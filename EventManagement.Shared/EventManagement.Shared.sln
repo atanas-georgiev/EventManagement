@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventManagement.Shared.ServiceBus", "EventManagement.Shared.ServiceBus\EventManagement.Shared.ServiceBus.csproj", "{7BE2C7CA-1638-42B8-8C3C-17ED6C6E042F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.TestAutomation", "EventManagement.TestAutomation\EventManagement.TestAutomation.csproj", "{20CF6254-CEF1-4959-B3CD-40A3F372B910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.TestAutomation.DateAndTime", "EventManagement.TestAutomation.DateAndTime\EventManagement.TestAutomation.DateAndTime.csproj", "{0FBED1E1-CAE1-4780-9CB3-C9E1EABF3CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.ТestAutomation.Paths", "EventManagement.TestAutomation.Paths\EventManagement.ТestAutomation.Paths.csproj", "{783BE739-2B32-4ECB-BDD3-35016D458BB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.TestAutomation.StringOperations", "EventManagement.TestAutomation.StringOperations\EventManagement.TestAutomation.StringOperations.csproj", "{896A818D-A7E5-45CA-8A2E-D6CC50268C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.TestAutomation.TestCore", "EventManagement.TestAutomation.TestCore\EventManagement.TestAutomation.TestCore.csproj", "{0F20F764-A22B-40E2-812D-697E48D9C03D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BE2C7CA-1638-42B8-8C3C-17ED6C6E042F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE2C7CA-1638-42B8-8C3C-17ED6C6E042F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE2C7CA-1638-42B8-8C3C-17ED6C6E042F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE2C7CA-1638-42B8-8C3C-17ED6C6E042F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CF6254-CEF1-4959-B3CD-40A3F372B910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CF6254-CEF1-4959-B3CD-40A3F372B910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CF6254-CEF1-4959-B3CD-40A3F372B910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CF6254-CEF1-4959-B3CD-40A3F372B910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBED1E1-CAE1-4780-9CB3-C9E1EABF3CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBED1E1-CAE1-4780-9CB3-C9E1EABF3CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBED1E1-CAE1-4780-9CB3-C9E1EABF3CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBED1E1-CAE1-4780-9CB3-C9E1EABF3CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{783BE739-2B32-4ECB-BDD3-35016D458BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783BE739-2B32-4ECB-BDD3-35016D458BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783BE739-2B32-4ECB-BDD3-35016D458BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783BE739-2B32-4ECB-BDD3-35016D458BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{896A818D-A7E5-45CA-8A2E-D6CC50268C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{896A818D-A7E5-45CA-8A2E-D6CC50268C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{896A818D-A7E5-45CA-8A2E-D6CC50268C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{896A818D-A7E5-45CA-8A2E-D6CC50268C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F20F764-A22B-40E2-812D-697E48D9C03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F20F764-A22B-40E2-812D-697E48D9C03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F20F764-A22B-40E2-812D-697E48D9C03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F20F764-A22B-40E2-812D-697E48D9C03D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B0D08F4-5538-442E-899F-AD84E3E5C805}
+	EndGlobalSection
+EndGlobal

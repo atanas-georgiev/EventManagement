@@ -1,0 +1,16 @@
+﻿.logo-svg {
+  width: 1em;
+  height: 0.43em;
+  line-height: 0.43em;
+  background-size: 2em 0.86em;
+  margin: .15em .1em;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center; }
+
+.logo-svg-white {
+  background-image: url(../images/KPMG-logo-white.svg); }
+
+.logo-svg-blue {
+  background-image: url(../images/KPMG-logo-blue.svg); }
+

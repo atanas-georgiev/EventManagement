@@ -1,0 +1,49 @@
+//Buttons
+.btn, .btn-lg, .btn-sm{
+	border: none;
+	border-radius: 0;
+	.fa{
+		font-size: 	.9em;
+		padding-right: .5em;	
+	}
+}
+.btn{
+	font-size: 	1.1em;
+	padding: .5em .8em;
+	margin-top: 10px;
+}
+.btn-default, .btn-default:focus{
+	background: $dark-gray !important;
+	color: $white !important;
+}
+.btn-primary, .btn-primary:focus{
+	background: $green-blue !important;
+}
+.btn-primary:hover{
+	background: darken(	$green-blue, 5%) !important;
+}
+.btn-default:hover{
+	background: darken(	$dark-gray, 5%) !important;
+	color: $white !important;
+}
+.btn-default:active{
+	background: lighten($dark-gray, 5%)  !important;
+	color: $white !important;
+}
+.btn-primary:active{
+	background: lighten($green-blue, 5%) !important;
+}
+.btn:active, .btn:focus{
+    outline: 5px auto $mid-gray !important;
+}
+.button-group{
+	.btn, .btn-lg, .btn-sm{
+		margin-right: 10px;
+	}
+}
+.button-group.text-right{
+	.btn, .btn-lg, .btn-sm{
+		margin-left: 10px;
+		margin-right: 0;
+	}
+}

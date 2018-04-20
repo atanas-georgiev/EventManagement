@@ -1,0 +1,79 @@
+//Dashboard
+.dashboard {
+    .nav-tabs {
+        li {
+            margin-right: 3px;
+
+            a {
+                border: 0;
+                padding: 5px 10px;
+                background: $mid-gray;
+                color: $white;
+                border-radius: 0;
+            }
+
+            a:hover {
+                border-radius: 0;
+                background: $dark-blue;
+            }
+        }
+
+        li.active {
+            a {
+                border: 0;
+                background: $white;
+                color: $darkest-gray;
+            }
+        }
+    }
+
+    .tab-content {
+        background: $white;
+        padding: 5px;
+    }
+
+    .k-grid {
+        box-shadow: none !important;
+        border: 0;
+
+        .k-grid-header {
+            background: none;
+        }
+
+        .k-header {
+            background: none;
+            border-bottom: 0;
+            border-color: rgba(0,0,0,0.08);
+        }
+
+        .k-grid-header-wrap {
+            border: 0;
+        }
+
+        .k-pager-wrap {
+            background: none !important;
+            border: 0 !important;
+            box-shadow: none !important;
+
+            .k-pager-refresh {
+                background: none;
+            }
+        }
+
+        td {
+            border: 0 !important;
+        }
+
+        .new td {
+            background: lighten($light-blue, 10%);
+        }
+    }
+
+    .k-filter-row {
+
+        th {
+            padding-bottom: 15px;
+            padding-top: 0px;
+        }
+    }
+}

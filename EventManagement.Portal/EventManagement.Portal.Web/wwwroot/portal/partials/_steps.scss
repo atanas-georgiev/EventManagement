@@ -1,0 +1,110 @@
+﻿// Global status steps
+
+.status-steps {
+    padding:0px;
+}
+
+
+.status-steps{    
+	.step {
+        padding-top: 30px;
+        text-align:center;
+        width:8.33333%;
+        height:110px;
+        float: left;
+        position: relative;
+        display: inline-block;
+        .status{
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            font-size:28px;
+        }
+
+	    .step-name {
+		    font-size:12px;
+		    line-height:1;
+		}
+
+		.status-complete::after {
+		    content:  "\f058";
+		    width:100%;
+		    clear:both;
+		    float:left;
+		    text-align:center;
+		    color: $green-blue;
+		}
+
+		.status-in-progress::after {
+		    content:    "\f013";
+		    width:100%;
+		    clear:both;
+		    float:left;
+		    text-align:center;
+		    color: $purple;
+		    -webkit-animation:spin 4s linear infinite;
+		    -moz-animation:spin 4s linear infinite;
+		    animation:spin 4s linear infinite;
+		}
+        @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+		.status-not-complete::after {
+		    content:   "\f10c";
+		    width:100%;
+		    clear:both;
+		    float:left;
+		    text-align:center;
+		    color: $mid-gray;
+		}
+
+		.status-waiting::after {
+		    content:   "\f017";
+		    width:100%;
+		    clear:both;
+		    float:left;
+		    text-align:center;
+		    color: $yellow;
+		}
+
+		.status-fail::after {
+		    content:   "\f057";
+		    width:100%;
+		    clear:both;
+		    float:left;
+		    text-align:center;
+		    color: $red;
+		}
+
+		.status-redo::after {
+		    content: "\f058";
+		    width:100%;
+		    clear:both;
+		    float:left;
+		    text-align:center;
+		    color:#ffdb00;
+		}	 
+	}	
+    .step:after {
+        border-top: 3px solid #ddd;
+        content: "";
+        height: 1px;
+        width: 60%;
+        float: left;
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 70%;
+    }
+    .step:last-child:after {
+        display: none;
+    }
+    .step-small{
+        .status{
+	        font-size:20px;
+	        line-height:40px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+﻿@page
+@{
+    ViewData["Title"] = "NotAuthorized";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+
+@using Microsoft.Extensions.Configuration
+@inject IConfigurationRoot Configuration
+
+<h3>You are not authorized to view this page</h3>
+<p>
+    <a href="@(Configuration["ServiceLocations:UserManagement"] + "Account/Login")"> Login</a> /
+    <a href="@(Configuration["ServiceLocations:UserManagement"] + "Account/Register")"> Register</a>
+</p>
+

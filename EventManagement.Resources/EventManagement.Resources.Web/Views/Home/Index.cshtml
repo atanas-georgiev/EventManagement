@@ -1,0 +1,16 @@
+@using Microsoft.Extensions.Configuration
+@inject IConfigurationRoot Configuration
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+ @*<app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>*@ 
+<app>Loading...</app>
+
+
+@section scripts {
+    <script src="@(Configuration["ServiceLocations:Portal"] + "dist/portal.min.js")"></script>
+    <script src="https://unpkg.com/gijgo@1.9.3/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="@(Configuration["ServiceLocations:Resources"] + "dist/vendor.js")" asp-append-version="false"></script>
+    <script src="@(Configuration["ServiceLocations:Resources"] + "dist/main-client.js")" asp-append-version="false"></script>
+}

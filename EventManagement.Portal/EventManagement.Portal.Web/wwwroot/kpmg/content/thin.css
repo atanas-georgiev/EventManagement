@@ -1,0 +1,29 @@
+﻿.fnt-tiny {
+  font-size: 9px; }
+
+.fnt-small {
+  font-size: 11px; }
+
+.fnt-medium {
+  font-size: 14px; }
+
+.fnt-large {
+  font-size: 20px; }
+
+.fnt-huge {
+  font-size: 36px; }
+
+.fnt-thin {
+  font-family: 'KPMG Web';
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: 'KPMG Web';
+  src: url("../fonts/KPMG Web-Thin.eot");
+  src: url("../fonts/KPMG Web-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/KPMG Web-Thin.woff2") format("woff2"), url("../fonts/KPMG Web-Thin.woff") format("woff"), url("../fonts/KPMG Web-Thin.ttf") format("truetype"), url("../fonts/KPMG Web-Thin.svg#KPMG Web-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal; }
+

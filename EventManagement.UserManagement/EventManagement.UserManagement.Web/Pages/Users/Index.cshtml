@@ -1,0 +1,107 @@
+﻿@page "{handler?}/{id?}"
+@model IndexModel
+@using Microsoft.Extensions.Configuration
+@inject IConfigurationRoot Configuration
+@{
+    ViewData["Title"] = "Users";
+}
+@Html.AntiForgeryToken()
+
+<br />
+<div class="row">
+    <div class="col-md-5 col-center well">
+        <h2>Users</h2>
+        <table id="grid"></table>
+    </div>
+</div>
+
+<div id="dialog" style="display: none">
+    <div data-role="body">
+        Are you sure?
+    </div>
+    <div data-role="footer">        
+        <button class="btn" id="delete-dialog-ok">OK</button>
+        <button class="btn" data-role="close">Cancel</button>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+
+        var UsersGrid = (function () {
+
+            var deleteDialog, grid;
+
+            function init() {
+                var editBaseUrl = "@(Configuration["ServiceLocations:UserManagement"])Users/Edit";
+                var data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Users) as String);
+
+                deleteDialog = $('#dialog').dialog({
+                    // uiLibrary: 'bootstrap',
+                    autoOpen: false,
+                    modal: true
+                });
+
+                $("#delete-dialog-ok").on("click", function (e) {
+                    var rowId = grid.getSelected();
+                    var data = grid.get(rowId);
+
+                    $.ajax({
+                        type: "post",
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("XSRF-TOKEN",
+                                $('input:hidden[name="__RequestVerificationToken"]').val());
+                        },
+                        url: '@(Configuration["ServiceLocations:UserManagement"])Users/Delete/' + data.Id,
+                        success: function (result, textStatus) {
+                            grid.removeRow(rowId - 1);
+                        },
+                        error: function (err, scnd) {
+                            console.log("test");
+                        }
+                    });
+
+                    deleteDialog.close();
+                });
+
+                grid = $('#grid').grid({
+                    dataSource: data,
+                    columns: [
+                        { field: 'FirstName', title: 'First Name', sortable: true },
+                        { field: 'LastName', title: 'Last Name', sortable: true },
+                        { field: 'Email', title: 'Email', sortable: true },
+                        @if (User.IsInRole("Admin"))
+                        {
+                            @:{ tmpl: '<a href="' + editBaseUrl + '/{Id}"> <span class="glyphicon glyphicon-pencil gj-cursor-pointer" title="Edit"></span></a>', width: 65, align: 'center', events: { 'click': GridEvents.Edit } },
+                            @:{ tmpl: '<span class="glyphicon glyphicon-remove gj-cursor-pointer" title="Delete"> </span>', width: 80, align: 'center', events: { 'click': GridEvents.Delete } },
+                        }
+                    ],
+                    pager: { limit: 5 }
+                });
+            }
+
+            var GridEvents = {
+                Delete: function (e) {
+                    var user = e.data.record;
+                    var message = "Are you sure you want to delete user " +
+                        user.FirstName + " " + user.LastName + " (" + user.Email + ") ?";
+                    $("#dialog div[data-role='body']").html(message);
+                    deleteDialog.open("Deleting user");
+                },
+
+                Edit: function (e) {
+                    window.location = "@(Configuration["ServiceLocations:UserManagement"])" + "Users/Edit/" + e.data.record.Id;
+                }
+            }
+
+            return {
+                init: init
+            }
+        })();
+
+            $(document).ready(function () {
+                UsersGrid.init();
+            });
+    </script>
+}

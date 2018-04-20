@@ -1,0 +1,13 @@
+@using Microsoft.Extensions.Configuration
+@inject IConfigurationRoot Configuration
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>
+
+<script src="@(Configuration["ServiceLocations:Registration"] + "dist/vendor.js")" asp-append-version="false"></script>
+@section scripts {
+    <script src="@(Configuration["ServiceLocations:Registration"] + "dist/main-client.js")" asp-append-version="false"></script>
+}
+

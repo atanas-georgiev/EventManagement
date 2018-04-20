@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <TestRunParameters>
+    <Parameter name="BR" value="chrome" />
+    <Parameter name="URLRegistration" value="http://atanas.it/EventManagement/Registration/" />
+    <Parameter name="URLLogin" value="http://atanas.it/EventManagement/UserManagement/Account/Login" />
+    <Parameter name="Report" value="TFS,Extent" />
+    <Parameter name="Language" value="en" />
+    <Parameter name="DBConnectionString" value="Server=.;Database=EventManagement.Registration;Trusted_Connection=True;MultipleActiveResultSets=true" />
+    <Parameter name="AuthUser" value="" />
+    <Parameter name="AuthPass" value="" />
+    <Parameter name="AuthType" value="" />
+  </TestRunParameters>
+</RunSettings>

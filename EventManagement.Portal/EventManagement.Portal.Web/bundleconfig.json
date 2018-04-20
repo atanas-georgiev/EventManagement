@@ -1,0 +1,33 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "wwwroot/dist/portal.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+        "wwwroot/lib/normalize-css/normalize.css",
+        "wwwroot/kpmg/content/kpmg-bootstrap.css",
+        "wwwroot/kpmg/content/light.css",
+        "wwwroot/kpmg/css/font-awesome.css",
+        "wwwroot/vendors/kendo-ui-theme.css",
+        "wwwroot/vendors/ng2-toastr.css",
+        "wwwroot/portal/portal.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/dist/portal.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/lib/jquery.cookie/jquery.cookie.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/kpmg/scripts/startup.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optinally generate .map file
+    "sourceMap": false
+  }
+]

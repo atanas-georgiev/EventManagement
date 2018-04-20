@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventManagement.Portal.Core\EventManagement.Portal.Core.csproj" />
+    <ProjectReference Include="..\EventManagement.Portal.Data\EventManagement.Portal.Data.csproj" />
+  </ItemGroup>
+
+</Project>

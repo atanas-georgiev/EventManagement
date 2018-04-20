@@ -1,0 +1,175 @@
+// General content
+.content{
+	height: 100%;
+	min-height: 100%;
+	padding-top: 80px;
+	padding-bottom: 25px;
+}
+.main-content{
+	margin-top: 20px;
+}
+
+.filters{	
+	.title{
+
+	}
+	.k-dropdown{
+		font-size: 11px;
+		margin-top: 2px;
+	}
+}
+//Service Details
+.well-title{
+	padding: 5px 10px;
+	background: $white;
+	color: $darkest-gray;
+	display: inline-block;
+}
+.service-info{
+	.header{
+		border-bottom: 1px solid $light-gray;
+		padding-bottom: 5px;
+		h2.title{
+			font-size: 18px;
+			line-height: 22px;
+			margin: 0;
+		}
+		.phase-info{
+			line-height: 22px;
+			.phase{
+				color: $mid-blue;
+				display: inline-block;
+			}
+		}
+		.complexity{
+			.k-dropdown{
+				font-size: 11px;
+			}
+		}
+	}
+	.subheader{
+		padding-top: 5px;
+		.label{
+			font-size: 14px;
+			color: $mid-gray;
+			font-weight: normal
+		}
+	}
+}
+.service-personal{
+	.row{
+		padding: 3px 0;
+		border-bottom: 1px solid $light-gray;
+	}
+	.row:last-child{
+		border-bottom: 0;
+	}
+	.label{
+			font-size: 14px;
+			color: $mid-gray;
+			font-weight: normal;
+		}
+	.info{float: right}
+}
+.service-files{
+	.well{		
+		font-size: 12px;
+	}
+	.scrollable{
+		height: 245px;
+		overflow-y: auto; 
+		.inner-well{
+			height: auto;
+		}
+	}
+	th{
+		font-weight: normal;
+	}
+	td{
+		padding: 2px !important;
+		border: none !important;
+		.fa{
+			margin-right: 3px;
+		}
+	}
+}
+.service-history{
+	.well{		
+		font-size: 12px;
+	}
+	.scrollable{
+		height: 215px;
+		overflow-y: auto; 
+		.inner-well{
+			height: auto;
+		}
+	}
+}
+.service-assign{
+	.people{
+		.title{
+			margin-left: 10px;
+			display: inline-block;
+		}
+	}
+	button{
+		margin-top: 0 !important;
+	}
+}
+// Trafic lights
+.deadline {
+    background:#999;
+    padding:2px;
+    width:16px;
+    height:16px;
+    display:block;
+    border-radius:20px;
+    text-align:center;
+    font-size: 12px;
+    line-height: 15px;
+    color:#fff;
+}
+.deadline-tab{
+	display: inline-block;
+	margin: 0 2px;
+	font-size: 10px;
+	line-height: 11px;
+    width:14px;
+    height:14px;
+}
+.deadline-details{
+	display: inline-block;
+	margin: 0 10px;
+	font-size: 16px;
+	line-height: 20px;
+    width:24px;
+    height:24px;
+}
+.green {
+    background: $dark-green;
+}
+
+.yellow {
+    background: $orange;
+}
+.red {
+    background: $red;
+}
+.blue{
+	background: $mid-blue;
+}
+.blue-text{
+	color: $mid-blue;
+}
+
+@media (min-width: 	970px){
+	.main-content{		
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}

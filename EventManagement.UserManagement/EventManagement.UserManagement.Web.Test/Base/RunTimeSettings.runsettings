@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>
+    <Parameter name="BR" value="chrome" />
+    <Parameter name="URLRegistration" value="http://event-mngt-dev.westeurope.cloudapp.azure.com/EventManagement/UserManagement/Account/Register" />
+    <Parameter name="Report" value="TFS,Extent" />
+    <Parameter name="Language" value="en" />
+    <Parameter name="DBConnectionString" value="Server=.;Database=EventManagement.UserManagement;Trusted_Connection=True;MultipleActiveResultSets=true" />
+    <Parameter name="AuthUser" value="" />
+    <Parameter name="AuthPass" value="" />
+    <Parameter name="AuthType" value="" />
+  </TestRunParameters>
+</RunSettings>

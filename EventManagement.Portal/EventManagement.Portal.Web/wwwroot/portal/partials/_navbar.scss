@@ -1,0 +1,83 @@
+//HEADER
+.navbar-taxray {
+  background: $mid-blue;
+  color: $white;
+  border-width: 0 0 1px;
+}
+
+.navbar-taxray .navbar-nav  > li > a {
+  color: $white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.navbar-logo{
+  background: $dark-blue;
+  height: 100%;
+  img{
+    height: 80px;
+  }
+}
+
+.navbar-profile-details {
+  margin-top: 5px;
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.navbar-header {
+  margin-top: 15px;
+}
+
+.navbar-toggle {
+  background: $white;
+}
+
+.navbar{
+    min-height: auto;
+}
+//HEAER HAV
+.navbar-nav{
+  margin-top: 5px;
+  li{
+    a{
+      background: none !important;
+      color: $white !important;
+    }
+    a:hover{
+      color: lighten($lightest-blue, 10%) !important;
+    }
+  }
+  li.active{
+    a{
+      color: lighten($lightest-blue, 10%) !important;
+    }
+  }
+  li:before{
+      content: "|";      
+      color: lighten($lightest-blue, 10%);
+      display: block !important;
+      float: right !important;
+      padding-top: 5px;
+  }
+  li:last-child:before{
+    display: none !important;
+  }
+}
+
+.navbar-links {
+    a {
+        color: $white;
+    }
+}
+
+
+@media (max-width: 970px) { 
+  .navbar-nav{
+    li:before{
+      display: none !important;
+    }
+  }
+}

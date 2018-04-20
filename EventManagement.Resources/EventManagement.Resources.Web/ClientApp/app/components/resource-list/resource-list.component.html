@@ -1,0 +1,11 @@
+<div class="col-md-12 well">
+    <h2>Resources</h2>
+
+    <div class="alert alert-danger" role="alert" *ngIf="error">
+        <button type="button" class="close" aria-label="Close" (click)="dismissError()"><span aria-hidden="true">&times;</span></button>
+    An error occured regarding resource <b>{{error.entity.name}}</b>. {{error.message}}</div>
+
+    <gijgo-grid #grid [configuration]="configuration"></gijgo-grid>
+
+    <a routerLink="/add" routerLinkActive="active" class="btn btn-primary">Create a new resource</a>
+</div>

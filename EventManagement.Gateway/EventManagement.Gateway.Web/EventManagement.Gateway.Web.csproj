@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+    <PackageReference Include="EventManagement.UserManagement.Shared" Version="1.0.399" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.1.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="3.0.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Data" Version="3.0.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.456" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventManagement.Gateway.Middleware.Error\EventManagement.Gateway.Middleware.Error.csproj" />
+    <ProjectReference Include="..\EventManagement.Gateway.Middleware.NotAuthorized\EventManagement.Gateway.Middleware.NotAuthorized.csproj" />
+    <ProjectReference Include="..\EventManagement.Gateway.Middleware.NotFound\EventManagement.Gateway.Middleware.NotFound.csproj" />
+    <ProjectReference Include="..\EventManagement.Gateway.Middleware.Request\EventManagement.Gateway.Middleware.Request.csproj" />
+    <ProjectReference Include="..\EventManagement.Gateway.Middleware.UrlRewite\EventManagement.Gateway.Middleware.UrlRewite.csproj" />
+    <ProjectReference Include="..\EventManagement.Gateway.Shared\EventManagement.Gateway.Shared.csproj" />
+  </ItemGroup>
+</Project>

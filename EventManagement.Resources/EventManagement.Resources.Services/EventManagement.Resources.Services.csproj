@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EventManagement.Shared.ServiceBus" Version="1.0.0-CI-20180326-123709" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventManagement.Resources.Data.Models\EventManagement.Resources.Data.Models.csproj" />
+    <ProjectReference Include="..\EventManagement.Resources.Data\EventManagement.Resources.Data.csproj" />
+    <ProjectReference Include="..\EventManagement.Resources.Shared\EventManagement.Resources.Shared.csproj" />
+  </ItemGroup>
+  
+</Project>

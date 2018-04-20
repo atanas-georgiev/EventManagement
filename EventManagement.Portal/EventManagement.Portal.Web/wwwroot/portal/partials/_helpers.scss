@@ -1,0 +1,70 @@
+﻿// borders
+.brd {
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 0;
+}
+
+.brd-r {
+    @extend .brd;
+    border-right-width: 1px;
+}
+
+.brd-l {
+    @extend .brd;
+    border-left-width: 1px;
+}
+
+.brd-t {
+    @extend .brd;
+    border-top-width: 1px;
+}
+
+.brd-b {
+    @extend .brd;
+    border-bottom-width: 1px;
+}
+
+.no-brd {
+    border: 0px !important;
+}
+
+.pd-l-30 {
+    padding-left: 30px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.pd-0 {
+    padding: 0;
+}
+
+.pd-r-30 {
+    padding-right: 30px;
+}
+
+.pd-t-30 {
+    padding-top: 30px;
+}
+
+.pd-b-30 {
+    padding-bottom: 30px;
+}
+
+.pd-l-20 {
+    padding-left: 20px;
+}
+
+.pd-r-20 {
+    padding-right: 20px;
+}
+
+.pd-t-20 {
+    padding-top: 20px;
+}
+
+.pd-b-20 {
+    padding-bottom: 20px;
+}

@@ -1,0 +1,40 @@
+﻿@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('../kpmg/fonts/RobotoCondensed-Regular-webfont.eot');
+    src: url('../kpmg/fonts/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../kpmg/fonts/RobotoCondensed-Regular-webfont.woff') format('woff'), url('../kpmg/fonts/RobotoCondensed-Regular-webfont.ttf') format('truetype'), url('../kpmg/fonts/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding-bottom: 80px;
+    font-family: "roboto_condensedregular";
+    color: #333;
+    background: #F2F2F2;
+    -ms-overflow-style: scrollbar;
+}
+
+/* Used to load fallback css in microservices */
+.taxray-portal-loaded {
+    visibility: hidden;
+}
+
+@import 'partials/colors';
+@import 'partials/bootstrap-overwrites';
+@import 'partials/helpers';
+@import 'partials/buttons';
+@import 'partials/popups';
+@import 'partials/navbar';
+@import 'partials/timer';
+@import 'partials/subheader';
+@import 'partials/timeline';
+@import 'partials/content';
+@import 'partials/footer';
+@import 'partials/steps';
+@import 'partials/dashboard';
+@import 'partials/forms';
+@import 'partials/kendo-overwrites';
