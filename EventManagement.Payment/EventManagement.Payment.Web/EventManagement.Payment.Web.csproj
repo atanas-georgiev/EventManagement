@@ -10,7 +10,7 @@
     <PackageReference Include="EventManagement.Registration.Shared" Version="1.0.202" />
     <PackageReference Include="EventManagement.Shared.ServiceBus" Version="1.0.0-CI-20180320-090402" />
     <PackageReference Include="EventManagement.UserManagement.Shared" Version="1.0.399" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.ServiceFabric" Version="6.1.456" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="3.0.456" />
     <PackageReference Include="Microsoft.ServiceFabric.Data" Version="3.0.456" />
